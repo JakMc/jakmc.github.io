@@ -13,9 +13,10 @@
         }
         .gallery {
             display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            grid-template-columns: repeat(5, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
+            max-width: 1200px; /* Adjust based on the size of 5 items */
+            margin: 0 auto;
         }
         .gallery-item {
             background: #fff;
@@ -50,6 +51,8 @@
         }
     </style>
 </head>
+
+
 <body>
 
 	<center><h2>Jake McMillan | Notes on Physics</h2>
