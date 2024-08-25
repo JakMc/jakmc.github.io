@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P4CVDKQWVJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-P4CVDKQWVJ');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Gallery</title>
+    <title>Jake McMillan | Physics Notes</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #f4f4f4;
+            background-color: #f3f3f3;
         }
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
             gap: 20px;
-            max-width: 1200px;
+            max-width: 2000px;
             margin: 0 auto;
         }
         .gallery-item {
@@ -114,13 +124,16 @@
 </head>
 <body>
 
-    <h1>PDF Gallery</h1>
+    <center><h2>Jake McMillan | Physics Notes</h2>
+    <p>Below is a collection of my summary notes for Newcastle University’s Physics course. These are based on my year’s course, so specifics may vary :)</p>
+    </center>
+
     <div class="gallery">
         <div class="gallery-item">
             <div class="image-container">
-                <img src="Stage 3/PHY3043.png" alt="PDF 1">
+                <img src="Stage 3/PHY3042.png" alt="Formation of Cosmological Structures">
                 <div class="year-and-toggle">
-                    <div class="year-label">2023</div>
+                    <div class="year-label">Stage 3</div>
                     <div class="toggle-info" onclick="toggleInfo(this)">+</div>
                 </div>
                 <div class="extra-info">
@@ -133,14 +146,16 @@
                     </ul>
                 </div>
             </div>
-            <h3>PDF Title 1</h3>
-            <a href="pdf1.pdf" download>Download PDF</a>
+            <h3>Cosmology</h3>
+            <a href="Stage 3/PHY3042 - Cosmology.pdf" download>Download PDF</a>
         </div>
+
+
         <div class="gallery-item">
             <div class="image-container">
-                <img src="Stage 3/PHY3043.png" alt="PDF 2">
+                <img src="Stage 3/PHY3043.png" alt="Black Hole Accretion">
                 <div class="year-and-toggle">
-                    <div class="year-label">2024</div>
+                    <div class="year-label">Stage 3</div>
                     <div class="toggle-info" onclick="toggleInfo(this)">+</div>
                 </div>
                 <div class="extra-info">
@@ -153,9 +168,78 @@
                     </ul>
                 </div>
             </div>
-            <h3>PDF Title 2</h3>
-            <a href="pdf2.pdf" download>Download PDF</a>
+            <h3>Radiative Transfer and High Energy Astrophysics</h3>
+            <a href="Stage 3/PHY3043 - Radiative Transfer and High Energy Astrophysics.pdf" download>Download PDF</a>
         </div>
+
+
+        <div class="gallery-item">
+            <div class="image-container">
+                <img src="Stage 3/PHY3024.png" alt="Radioactive Decay">
+                <div class="year-and-toggle">
+                    <div class="year-label">Stage 3</div>
+                    <div class="toggle-info" onclick="toggleInfo(this)">+</div>
+                </div>
+                <div class="extra-info">
+                    <h3>Module Information</h3>
+                    <p>Topics taught in this module include:</p>
+                    <ul>
+                        <li>Topic A</li>
+                        <li>Topic B</li>
+                        <li>Topic C</li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Atoms, Molecules, and Nuclei</h3>
+            <a href="Stage 3/PHY3024 - Atoms Molecules and Nuclei.pdf" download>Download PDF</a>
+        </div>
+
+
+        <div class="gallery-item">
+            <div class="image-container">
+                <img src="Stage 3/PHY3023.png" alt="The Central Potential">
+                <div class="year-and-toggle">
+                    <div class="year-label">Stage 3</div>
+                    <div class="toggle-info" onclick="toggleInfo(this)">+</div>
+                </div>
+                <div class="extra-info">
+                    <h3>Module Information</h3>
+                    <p>Topics taught in this module include:</p>
+                    <ul>
+                        <li>Topic A</li>
+                        <li>Topic B</li>
+                        <li>Topic C</li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Advanced Materials and Solid State Physics</h3>
+            <a href="Stage 3/PHY3023 - Advanced Materials and Solid State Physics.pdf" download>Download PDF</a>
+        </div>
+
+
+        <div class="gallery-item">
+            <div class="image-container">
+                <img src="Stage 3/PHY3040.png" alt="Hydrostatic Eqiulibrium">
+                <div class="year-and-toggle">
+                    <div class="year-label">Stage 3</div>
+                    <div class="toggle-info" onclick="toggleInfo(this)">+</div>
+                </div>
+                <div class="extra-info">
+                    <h3>Module Information</h3>
+                    <p>Topics taught in this module include:</p>
+                    <ul>
+                        <li>Topic A</li>
+                        <li>Topic B</li>
+                        <li>Topic C</li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Stellar Structure and Evolution</h3>
+            <a href="Stage 3/PHY3040 - Stellar Structure and Evolution.pdf" download>Download PDF</a>
+        </div>
+
+
+
         <!-- Repeat the above block for more PDFs -->
     </div>
 
