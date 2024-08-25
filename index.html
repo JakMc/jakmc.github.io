@@ -171,9 +171,7 @@
             const imageContainer = galleryItem.querySelector('.image-container');
             const toggleBtn = galleryItem.querySelector('.toggle-info');
 
-            const isOpen = extraInfo.style.display === 'flex';
-
-            if (isOpen) {
+            if (extraInfo.style.display === 'flex') {
                 extraInfo.style.display = 'none';
                 imageContainer.style.display = 'block';
                 toggleBtn.innerText = '+';
@@ -184,6 +182,5 @@
             }
         }
     </script>
-
 </body>
 </html>
