@@ -101,13 +101,16 @@
             justify-content: center;
             align-items: center;
             border-radius: 8px;
-            text-align: left;
+            box-sizing: border-box;
         }
         .extra-info p {
             margin: 10px 0;
         }
+        .extra-info h3 {
+            margin-bottom: 15px;
+        }
 
-        
+
     </style>
 </head>
 <body>
@@ -165,18 +168,18 @@
         function toggleInfo(element) {
             const galleryItem = element.parentElement;
             const extraInfo = galleryItem.querySelector('.extra-info');
-            const img = galleryItem.querySelector('img');
+            const imageContainer = galleryItem.querySelector('.image-container');
             const toggleBtn = galleryItem.querySelector('.toggle-info');
 
             const isOpen = extraInfo.style.display === 'flex';
 
             if (isOpen) {
                 extraInfo.style.display = 'none';
-                img.style.display = 'block';
+                imageContainer.style.display = 'block';
                 toggleBtn.innerText = '+';
             } else {
                 extraInfo.style.display = 'flex';
-                img.style.display = 'none';
+                imageContainer.style.display = 'none';
                 toggleBtn.innerText = '-';
             }
         }
