@@ -13,7 +13,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jake McMillan | Physics Notes</title>
+    <title>PDF Gallery</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,9 +23,9 @@
         }
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
-            max-width: 2000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
         .gallery-item {
@@ -38,6 +38,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            position: relative;
         }
         .gallery-item img {
             max-width: 100%;
@@ -63,91 +64,113 @@
         .gallery-item a:hover {
             background-color: #0056b3;
         }
+        .year-label {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        .toggle-info {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .extra-info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 20px;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            text-align: left;
+        }
+        .extra-info p {
+            margin: 10px 0;
+        }
     </style>
 </head>
-
-
 <body>
 
+    <center><h2>Jake McMillan | Physics Notes</h2>
+    <p>Below is a collection of my summary notes for Newcastle University’s Physics course. These are based on my year’s course, so specifics may vary :)</p>
+    </center>
 
-	<center><h2>Jake McMillan | Physics Notes</h2>
-	<p>Below is a collection of my module summary notes for Newcastle University’s Physics course. These are based on my year’s course, so specifics may vary :)</p>
-	</center>
-
+    <h1>PDF Gallery</h1>
     <div class="gallery">
         <div class="gallery-item">
+            <div class="year-label">Year 3</div>
+            <div class="toggle-info" onclick="toggleInfo(this)">+</div>
             <img src="Stage 3/PHY3042.png" alt="Formation of Cosmological Structures">
             <h3>Cosmology</h3>
             <a href="Stage 3/PHY3042 - Cosmology.pdf" download>Download PDF</a>
+            <div class="extra-info">
+                <div class="toggle-info" onclick="toggleInfo(this)">-</div>
+                <h3>Module Information</h3>
+                <p>Topics taught in this module include:</p>
+                <ul>
+                    <li>Topic 1</li>
+                    <li>Topic 2</li>
+                    <li>Topic 3</li>
+                </ul>
+            </div>
         </div>
 
         <div class="gallery-item">
+            <div class="year-label">Year 2</div>
+            <div class="toggle-info" onclick="toggleInfo(this)">+</div>
+
             <img src="Stage 3/PHY3043.png" alt="Black Hole Accretion">
             <h3>Radiative Transfer and High Energy Astrophysics</h3>
             <a href="Stage 3/PHY3043 - Radiative Transfer and High Energy Astrophysics.pdf" download>Download PDF</a>
-        </div>
 
-        <div class="gallery-item">
-            <img src="Stage 3/PHY3024.png" alt="Radioactive Decay">
-            <h3>Atoms, Molecules, and Nuclei</h3>
-            <a href="Stage 3/PHY3024 - Atoms Molecules and Nuclei.pdf" download>Download PDF</a>
+            <div class="extra-info">
+                <div class="toggle-info" onclick="toggleInfo(this)">-</div>
+                <h3>Module Information</h3>
+                <p>Topics taught in this module include:</p>
+                <ul>
+                    <li>Topic A</li>
+                    <li>Topic B</li>
+                    <li>Topic C</li>
+                </ul>
+            </div>
         </div>
+        <!-- Repeat the above block for more PDFs -->
 
-        <div class="gallery-item">
-            <img src="Stage 3/PHY3023.png" alt="The Central Potential">
-            <h3>Advanced Materials and Solid State Physics</h3>
-            <a href="Stage 3/PHY3023 - Advanced Materials and Solid State Physics.pdf" download>Download PDF</a>
-        </div>
 
-        <div class="gallery-item">
-            <img src="Stage 3/PHY3040.png" alt="Hydrostatic Eqiulibrium">
-            <h3>Stellar Structure and Evolution</h3>
-            <a href="Stage 3/PHY3040 - Stellar Structure and Evolution.pdf" download>Download PDF</a>
-        </div>
-
-        <div class="gallery-item">
-            <img src="Stage 3/PHY2033.png" alt="Eulerian Vs Lagrangian Views"> 
-            <h3>Fluid Dynamics</h3>
-            <a href="Stage 3/PHY2033 - Fluid Dynamics.pdf" download>Download PDF</a>
-        </div>
-
-        <div class="gallery-item">
-            <img src="Stage 3/PHY3032.png" alt="Newtonian Relativity in a Wire">
-            <h3>Advanced Electromagnetism</h3>
-            <a href="Stage 3/PHY3032 - Advanced Electromagnetism.pdf" download>Download PDF</a>
-        </div>
-
-        <div class="gallery-item">
-            <img src="Stage 3/PHY3020.png" alt="Classical Vs Quantum Interpretation">
-            <h3>Advanced Quantum Mechanics</h3>
-            <a href="Stage 3/PHY3020 - Advanced Quantum Mechanics.pdf" download>Download PDF</a>
-        </div>
-
-        <div class="gallery-item">
-            <img src="Stage 3/PHY3022.png" alt="Rocket in Space">
-            <h3>Relativity</h3>
-            <a href="Stage 3/PHY3022 - Relativity.pdf" download>Download PDF</a>
-        </div>
-
-        <div class="gallery-item">
-            <img src="Stage 3/PHY3029.png" alt="Euler Angles">
-            <h3>Variational Methods and Lagrangian Dynamics</h3>
-            <a href="Stage 3/PHY3029 - Variational Methods and Lagrangian Dynamics.pdf" download>Download PDF</a>
-        </div>
-
-        <div class="gallery-item">
-            <img src="Stage 2/PHY2036.png" alt="Density of States">
-            <h3>Thermodynamics and Statistical Mechanics</h3>
-            <a href="Stage 2/PHY2036 - Thermodynamics and Statistical Mechanics.pdf" download>Download PDF</a>
-        </div>
-
-        <div class="gallery-item">
-            <img src="Stage 2/PHY2038.png" alt="Fermat’s Principle">
-            <h3>Optics</h3>
-            <a href="Stage 2/PHY2038 - Optics.pdf" download onclick="gtag('event', 'download', {'event_category': 'Downloads', 'event_label': 'PHY2038 - Optics.pdf'});">Download PDF</a>
-        </div>
 
     </div>
+
+    <script>
+        function toggleInfo(element) {
+            const extraInfo = element.parentElement.querySelector('.extra-info');
+            const isOpen = extraInfo.style.display === 'flex';
+
+            if (isOpen) {
+                extraInfo.style.display = 'none';
+                element.innerText = '+';
+            } else {
+                extraInfo.style.display = 'flex';
+                element.innerText = '-';
+            }
+        }
+    </script>
 
 </body>
 </html>
