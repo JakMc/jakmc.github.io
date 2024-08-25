@@ -106,6 +106,8 @@
         .extra-info p {
             margin: 10px 0;
         }
+
+        
     </style>
 </head>
 <body>
@@ -161,15 +163,21 @@
 
     <script>
         function toggleInfo(element) {
-            const extraInfo = element.parentElement.querySelector('.extra-info');
+            const galleryItem = element.parentElement;
+            const extraInfo = galleryItem.querySelector('.extra-info');
+            const img = galleryItem.querySelector('img');
+            const toggleBtn = galleryItem.querySelector('.toggle-info');
+
             const isOpen = extraInfo.style.display === 'flex';
 
             if (isOpen) {
                 extraInfo.style.display = 'none';
-                element.innerText = '+';
+                img.style.display = 'block';
+                toggleBtn.innerText = '+';
             } else {
                 extraInfo.style.display = 'flex';
-                element.innerText = '-';
+                img.style.display = 'none';
+                toggleBtn.innerText = '-';
             }
         }
     </script>
