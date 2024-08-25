@@ -376,30 +376,32 @@
     </div>
 
     <script>
-    function toggleInfo(element) {
-        // Close any currently open extra-info sections
-        document.querySelectorAll('.extra-info').forEach(function(infoSection) {
-            if (infoSection.style.display === 'flex') {
-                infoSection.style.display = 'none';
-                const toggleBtn = infoSection.closest('.image-container').querySelector('.year-toggle');
-                toggleBtn.innerText = "▶ " + toggleBtn.innerText.slice(2);
-            }
-        });
+        function toggleInfo(element) {
+            // Close any currently open extra-info sections
+            document.querySelectorAll('.extra-info').forEach(function(infoSection) {
+                if (infoSection.style.display === 'flex') {
+                    infoSection.style.display = 'none';
+                    const toggleBtn = infoSection.closest('.image-container').querySelector('.year-toggle');
+                    toggleBtn.innerText = "► " + toggleBtn.innerText.slice(2);
+                }
+            });
 
-        // Get the extra-info section associated with the clicked toggle
-        var extraInfo = element.closest('.image-container').querySelector('.extra-info');
-        var isVisible = extraInfo.style.display === 'flex';
-        
-        // If the clicked section is already visible, just close it
-        if (isVisible) {
-            extraInfo.style.display = 'none';
-            element.innerText = "▶ " + element.innerText.slice(2);
-        } else {
-            // Otherwise, open it
-            extraInfo.style.display = 'flex';
-            element.innerText = "▼ " + element.innerText.slice(2);
+            // Get the extra-info section associated with the clicked toggle
+            var extraInfo = element.closest('.image-container').querySelector('.extra-info');
+            var isVisible = extraInfo.style.display === 'flex';
+            
+            // If the clicked section is already visible, just close it
+            if (isVisible) {
+                extraInfo.style.display = 'none';
+                element.innerText = "► " + element.innerText.slice(2);
+            } else {
+                // Otherwise, open it
+                extraInfo.style.display = 'flex';
+                element.innerText = "▼ " + element.innerText.slice(2);
+            }
         }
-    }
-</script>
+    </script>
+
+
 </body>
 </html>
