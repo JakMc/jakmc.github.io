@@ -65,28 +65,35 @@
             background-color: #0056b3;
         }
 
-        .year-label {
+        .year-and-toggle {
             position: absolute;
             top: 10px;
             right: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .year-label {
             background-color: #007bff;
             color: #fff;
             padding: 5px 10px;
             border-radius: 3px;
             font-size: 14px;
+            margin-right: 10px;
         }
         .toggle-info {
-            position: absolute;
-            top: 10px;
-            left: 10px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
             background-color: #007bff;
             color: #fff;
-            padding: 5px 10px;
-            border-radius: 3px;
-            font-size: 14px;
+            text-align: center;
+            line-height: 25px;
             cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-
         .extra-info {
             position: absolute;
             top: 0;
@@ -110,7 +117,6 @@
             margin-bottom: 15px;
         }
 
-
     </style>
 </head>
 <body>
@@ -122,11 +128,17 @@
     <h1>PDF Gallery</h1>
     <div class="gallery">
         <div class="gallery-item">
-            <div class="year-label">Year 3</div>
-            <div class="toggle-info" onclick="toggleInfo(this)">+</div>
-            <img src="Stage 3/PHY3042.png" alt="Formation of Cosmological Structures">
+
+            <div class="year-and-toggle">
+                <div class="year-label">Year 3</div>
+                <div class="toggle-info" onclick="toggleInfo(this)">+</div>
+            </div>
+            <div class="image-container">
+                <img src="Stage 3/PHY3042.png" alt="Formation of Cosmological Structures">
+            </div>
             <h3>Cosmology</h3>
             <a href="Stage 3/PHY3042 - Cosmology.pdf" download>Download PDF</a>
+
             <div class="extra-info">
                 <div class="toggle-info" onclick="toggleInfo(this)">-</div>
                 <h3>Module Information</h3>
@@ -140,10 +152,16 @@
         </div>
 
         <div class="gallery-item">
-            <div class="year-label">Year 2</div>
-            <div class="toggle-info" onclick="toggleInfo(this)">+</div>
 
-            <img src="Stage 3/PHY3043.png" alt="Black Hole Accretion">
+            <div class="year-and-toggle">
+                <div class="year-label">Year 2</div>
+                <div class="toggle-info" onclick="toggleInfo(this)">+</div>
+            </div>
+
+            <div class="image-container">
+                <img src="Stage 3/PHY3043.png" alt="Black Hole Accretion">
+            </div>
+
             <h3>Radiative Transfer and High Energy Astrophysics</h3>
             <a href="Stage 3/PHY3043 - Radiative Transfer and High Energy Astrophysics.pdf" download>Download PDF</a>
 
@@ -166,10 +184,10 @@
 
     <script>
         function toggleInfo(element) {
-            const galleryItem = element.parentElement;
+            const galleryItem = element.closest('.gallery-item');
             const extraInfo = galleryItem.querySelector('.extra-info');
             const imageContainer = galleryItem.querySelector('.image-container');
-            const toggleBtn = galleryItem.querySelector('.toggle-info');
+            const toggleBtn = element;
 
             if (extraInfo.style.display === 'flex') {
                 extraInfo.style.display = 'none';
@@ -182,5 +200,7 @@
             }
         }
     </script>
+
+    
 </body>
 </html>
