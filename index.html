@@ -165,4 +165,15 @@
             const extraInfo = galleryItem.querySelector('.extra-info');
             const toggleBtn = element;
 
-            if (
+            if (extraInfo.style.display === 'flex') {
+                extraInfo.style.display = 'none';
+                toggleBtn.innerText = '+';
+            } else {
+                extraInfo.style.display = 'flex';
+                toggleBtn.innerText = '-';
+            }
+        }
+    </script>
+
+</body>
+</html>
