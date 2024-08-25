@@ -30,6 +30,9 @@
             justify-content: space-between;
             position: relative;
         }
+        .image-container {
+            position: relative;
+        }
         .gallery-item img {
             max-width: 100%;
             height: auto;
@@ -54,28 +57,13 @@
         .gallery-item a:hover {
             background-color: #0056b3;
         }
-        .extra-info {
+        .year-and-toggle {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: #fff;
-            padding: 20px;
-            display: none;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            border-radius: 8px;
-            box-sizing: border-box;
-        }
-        .extra-info .year-and-toggle {
-            width: 100%;
+            top: 10px;
+            right: 10px;
             display: flex;
-            justify-content: flex-end;
             align-items: center;
-            margin-bottom: 20px;
+            z-index: 2;
         }
         .year-label {
             background-color: #007bff;
@@ -99,6 +87,23 @@
             align-items: center;
             justify-content: center;
         }
+        .extra-info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 20px;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            box-sizing: border-box;
+            z-index: 1;
+        }
         .extra-info p {
             margin: 10px 0;
         }
@@ -113,12 +118,12 @@
     <div class="gallery">
         <div class="gallery-item">
             <div class="image-container">
-                <img src="Stage 3/PHY3040.png" alt="PDF 1">
+                <img src="Stage 3/PHY3043.png" alt="PDF 1">
+                <div class="year-and-toggle">
+                    <div class="year-label">2023</div>
+                    <div class="toggle-info" onclick="toggleInfo(this)">+</div>
+                </div>
                 <div class="extra-info">
-                    <div class="year-and-toggle">
-                        <div class="year-label">2023</div>
-                        <div class="toggle-info" onclick="toggleInfo(this)">-</div>
-                    </div>
                     <h3>Module Information</h3>
                     <p>Topics taught in this module include:</p>
                     <ul>
@@ -134,11 +139,11 @@
         <div class="gallery-item">
             <div class="image-container">
                 <img src="Stage 3/PHY3043.png" alt="PDF 2">
+                <div class="year-and-toggle">
+                    <div class="year-label">2024</div>
+                    <div class="toggle-info" onclick="toggleInfo(this)">+</div>
+                </div>
                 <div class="extra-info">
-                    <div class="year-and-toggle">
-                        <div class="year-label">2024</div>
-                        <div class="toggle-info" onclick="toggleInfo(this)">+</div>
-                    </div>
                     <h3>Module Information</h3>
                     <p>Topics taught in this module include:</p>
                     <ul>
@@ -160,15 +165,4 @@
             const extraInfo = galleryItem.querySelector('.extra-info');
             const toggleBtn = element;
 
-            if (extraInfo.style.display === 'flex') {
-                extraInfo.style.display = 'none';
-                toggleBtn.innerText = '+';
-            } else {
-                extraInfo.style.display = 'flex';
-                toggleBtn.innerText = '-';
-            }
-        }
-    </script>
-
-</body>
-</html>
+            if (
