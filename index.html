@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,7 +54,6 @@
         .gallery-item a:hover {
             background-color: #0056b3;
         }
-        
         .extra-info {
             position: absolute;
             top: 0;
@@ -67,19 +65,17 @@
             padding: 20px;
             display: none;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             border-radius: 8px;
             box-sizing: border-box;
         }
-
-
-        .year-and-toggle {
-            position: absolute;
-            top: 10px;
-            right: 10px;
+        .extra-info .year-and-toggle {
+            width: 100%;
             display: flex;
+            justify-content: flex-end;
             align-items: center;
+            margin-bottom: 20px;
         }
         .year-label {
             background-color: #007bff;
@@ -103,7 +99,6 @@
             align-items: center;
             justify-content: center;
         }
-        
         .extra-info p {
             margin: 10px 0;
         }
@@ -117,13 +112,13 @@
     <h1>PDF Gallery</h1>
     <div class="gallery">
         <div class="gallery-item">
-            <div class="year-and-toggle">
-                <div class="year-label">2023</div>
-                <div class="toggle-info" onclick="toggleInfo(this)">+</div>
-            </div>
             <div class="image-container">
-                <img src="Stage 3/PHY3043.png" alt="PDF 1">
+                <img src="Stage 3/PHY3040.png" alt="PDF 1">
                 <div class="extra-info">
+                    <div class="year-and-toggle">
+                        <div class="year-label">2023</div>
+                        <div class="toggle-info" onclick="toggleInfo(this)">-</div>
+                    </div>
                     <h3>Module Information</h3>
                     <p>Topics taught in this module include:</p>
                     <ul>
@@ -137,13 +132,13 @@
             <a href="pdf1.pdf" download>Download PDF</a>
         </div>
         <div class="gallery-item">
-            <div class="year-and-toggle">
-                <div class="year-label">2024</div>
-                <div class="toggle-info" onclick="toggleInfo(this)">+</div>
-            </div>
             <div class="image-container">
                 <img src="Stage 3/PHY3043.png" alt="PDF 2">
                 <div class="extra-info">
+                    <div class="year-and-toggle">
+                        <div class="year-label">2024</div>
+                        <div class="toggle-info" onclick="toggleInfo(this)">+</div>
+                    </div>
                     <h3>Module Information</h3>
                     <p>Topics taught in this module include:</p>
                     <ul>
